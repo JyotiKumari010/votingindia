@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* General styles */
+
+/* General Styles */
+body {
+    margin: 0; /* Removes default body margin */
+    font-family: Arial, sans-serif; /* Sets font family */
+    background-color: lightblue; /* Light background color */
+    padding: 0; /* Removes default padding */
+    width: 100%;
+    max-width: 2000px;
+}
+
+
+
+
+/* home begin*/
+
+
+/* Moving Notices Section */
+.notices {
+width: 100%; /* Notices section spans the full width of the container */
+overflow: hidden; /* Hides content that goes outside the visible area */
+background-color:lightblue; /* Light grey background for the notices section */
+padding: 10px 0; /* Adds vertical padding around the notices */
+position: relative; /* Positions the notice track relative to this container */
+}
+
+.notice-track {
+display: flex; /* Aligns all notice items horizontally */
+animation: scroll 30s linear infinite; /* Applies a continuous scrolling animation */
+white-space: nowrap; /* Prevents wrapping of text, keeping notices in a single line */
+}
+
+.notice {
+margin: 0 30px; /* Adds horizontal spacing between notices */
+color: darkblue; /* Sets the text color for notices to blue */
+text-decoration: none; /* Removes the default underline for notices */
+font-size: 16px; /* Sets the font size for notice text */
+}
+
+.notice:hover {
+text-decoration: underline; /* Adds an underline when hovering over a notice */
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scroll {
+0% {
+transform: translateX(100%); /* Starts the track off-screen on the right */
+}
+100% {
+transform: translateX(-100%); /* Moves the track off-screen on the left */
+}
+}
+
+
+/* Notes Container Styles */
+.notes-container {
+    background-color:lavender;
+display: flex; /* Arrange the note boxes in a single row */
+gap: 20px; /* Add space between the note boxes */
+margin: 20px auto; /* Center the container and add spacing */
+padding: 10px; /* Add some padding inside the container */
+justify-content: center; /* Center the notes horizontally */
+flex-wrap: wrap; /* Allow notes to wrap to the next row if the screen is too small */
+}
+
+/* Individual Note Box Styles */
+.note-box {
+background-color:lavenderblush; /* White background for notes */
+border: 5px solid palevioletred; /* Light border around the note box */
+border-radius: 10px; /* Rounded corners for a modern look */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+padding: 20px; /* Add padding inside the note box */
+width: 250px; /* Fixed width for each note box */
+text-align: left; /* Align text to the left */
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Note Box Heading */
+.note-box h3 {
+margin-top: 0; /* Remove top margin for headings */
+color: #333; /* Darker color for the heading text */
+font-size: 18px; /* Font size for headings */
+}
+
+/* Note Box Content */
+.note-box p {
+color: #666; /* Slightly lighter color for paragraph text */
+font-size: 14px; /* Font size for the note content */
+margin-bottom: 0; /* Remove bottom margin for a clean look */
+}
+
+/* Hover Effects for Note Boxes */
+.note-box:hover {
+transform: translateY(-5px); /* Lift the note box slightly */
+box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Enhance the shadow on hover */
+}
+
+/* Map of India */
+
+/* Container for map and state names with flex layout */
+.india-section {
+        display: flex; /* Set the layout to flex */
+        width: 100vw; /* Take up the entire viewport width */
+        height: 100vh; /* Take up the entire viewport height */
+        overflow: hidden; /* Hide overflow content */
+        justify-content: space-between; /* Spread out the content between */
+        border: 5px solid orangered; /* Light grey border around the entire row */
+        border-radius: 15px; /* Rounded corners for the border */
+    }
+
+    /* Style for the map container */
+    .india-map {
+        flex: 1; /* Take equal space in the container */
+        background: url('11.jpeg') no-repeat center center; /* Set background image */
+        background-size: cover; /* Make sure the image covers the whole container */
+        background-position: center center; /* Center the image */
+        height: 100%; /* Make it take up the full height */
+        padding: 5px; /* Small padding */
+        border-right: 5px solid orangered; /* Border between the map and state names */
+    }
+
+    /* Style for state names container */
+    .state-names {
+        flex: 1; /* Take equal space in the container */
+        display: flex; /* Use flexbox for layout */
+        flex-wrap: wrap; /* Wrap the items to the next line if needed */
+        justify-content: center; /* Center items horizontally */
+        align-items: flex-start; /* Align the items to the top */
+        background: lightcyans; /* Light grey background */
+        padding: 20px; /* Padding around the state buttons */
+        overflow-y: auto; /* Enable vertical scrolling if the content overflows */
+        height: 100%; /* Full height */
+    }
+
+    /* Heading styling */
+    .state-names h2 {
+        width: 80%; /* Full width */
+        text-align: center; /* Center align the heading */
+        margin-bottom: 30px; /* Bottom margin for spacing */
+        color: #2f4f4f; /* Dark slate grey color for text */
+        font-family: 'Arial', sans-serif; /* Clean and modern font */
+        font-size: 1.5em; /* Slightly larger font for the heading */
+    }
+
+    /* Style for each state name button */
+    .state-names a {
+        display: inline-block; /* Make each button inline but block-level for width */
+        padding: 15px 30px; /* Padding for the button */
+        margin: 10px; /* Margin between the buttons */
+        text-decoration: none; /* Remove underlines */
+        font-weight: bold; /* Bold font */
+        border-radius: 10px; /* Rounded corners for the buttons */
+        transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+        min-width: 200px; /* Set a minimum width to make buttons the same size */
+        max-width: 300px; /* Set a maximum width */
+        text-align: center; /* Center align text in the button */
+        color: #4a4a4a; /* Subtle grey text color */
+        font-size: 1.1em; /* Slightly larger text */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    }
+
+    /* Complementary pastel colors for the buttons */
+    .state-names a:nth-child(odd) { 
+        background-color: #a8d8ff; /* Pastel Blue for odd items */
+    }
+    .state-names a:nth-child(even) { 
+        background-color: #ffb3b3; /* Pastel Peach for even items */
+    }
+
+    /* Hover effects for buttons */
+    .state-names a:hover {
+        transform: scale(1.05); /* Slightly enlarge the button */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Darker shadow effect */
+        background-color: palevioletred; /* Soft red color on hover */
+    }
+
+    /* Responsive design for mobile devices */
+    @media (max-width: 768px) {
+        .india-section {
+            flex-direction: column; /* Stack the map and state buttons vertically */
+            height: auto; /* Let height adjust automatically */
+        }
+
+        .india-map, .state-names {
+            height: auto; /* Let each section have auto height */
+        }
+
+        .india-map {
+            height: 50%; /* Limit map height to 50% on small screens */
+            border-right: none; /* Remove the border between the map and state names */
+        }
+
+        .state-names a {
+            flex: 1 1 100%; /* Make the buttons take full width */
+            margin: 5px; /* Less margin on small screens */
+            text-align: center; /* Center text on smaller screens */
+        }
+    }
+
+
+
+/*gallery */
+
+/* General styling for the gallery */
+.page {
+font-family: Arial, sans-serif; /* Sets a clean, readable font */
+        margin: 0; /* Removes default margin */
+        padding: 0; /* Removes default padding */
+        background-color: lavender; /* Light background for a clean look */
+        display: flex; /* Enables flexbox for alignment */
+        flex-direction: column; /* Arranges items vertically */
+        align-items: center; /* Centers items horizontally */
+        justify-content: center; /* Centers items vertically */
+        min-height: 100vh; /* Ensures the page fills the viewport height */
+      
+    }
+
+    .gallery-box {
+        width: 90%; /* Keeps the box within the viewport width */
+        max-width: 1200px; /* Sets a maximum width */
+        background: white; /* White background for contrast */
+        border:5px solid #20c997; /* Adds a subtle border */
+        border-radius: 30px; /* Rounds the corners */
+        padding: 20px; /* Adds inner spacing */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    .gallery-heading {
+        font-size: 24px; /* Larger font for the heading */
+        font-weight: bold; /* Bold text for emphasis */
+        margin-bottom: 15px; /* Spacing below the heading */
+        text-align: center; /* Centers the heading text */
+    }
+
+    .gallery-container {
+        display: flex; /* Creates a flexible layout for the gallery items */
+        flex-wrap: wrap; /* Allows items to wrap to the next line */
+        gap: 15px; /* Adds spacing between gallery items */
+        justify-content: center; /* Centers the items in the container */
+        padding: 20px; /* Adds padding around the container */
+    }
+
+    .gallery-item {
+        position: relative; /* Enables positioning for the overlay */
+        overflow: hidden; /* Ensures content stays within the item boundary */
+        flex: 1 1 calc(33.333% - 30px); /* Responsive width calculation */
+        max-width: calc(33.333% - 30px); /* Limits maximum width */
+        min-width: 250px; /* Sets a minimum width */
+        border: 5px solid #20c997(34, 23, 189); /* Adds a border around the item */
+        border-radius: 15px; /* Rounds the corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+        background-color: #fff; /* Background for the item */
+    }
+
+    /* Different aspect ratios for various formats */
+    .gallery-item.square {
+        aspect-ratio: 1 / 1; /* Square format */
+    }
+
+    .gallery-item.horizontal {
+        aspect-ratio: 16 / 9; /* Horizontal rectangle */
+    }
+
+    .gallery-item.vertical {
+        aspect-ratio: 3 / 4; /* Vertical rectangle */
+    }
+
+    .gallery-item.rectangle {
+        aspect-ratio: 4 / 3; /* Standard rectangle */
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.05); /* Slight zoom effect on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Emphasized shadow on hover */
+    }
+
+    .gallery-item img {
+        width: 100%; /* Ensures the image fills the item width */
+        height: 100%; /* Ensures the image fills the item height */
+        object-fit: cover; /* Maintains the image aspect ratio */
+        border-radius: 10px; /* Rounds the image corners */
+    }
+
+    .gallery-item .overlay {
+        position: absolute; /* Positions the overlay over the image */
+        bottom: 0; /* Places overlay at the bottom */
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+        opacity: 0; /* Hidden by default */
+        display: flex; /* Flexbox for centering content */
+        align-items: center; /* Centers content vertically */
+        justify-content: center; /* Centers content horizontally */
+        color: #fff; /* White text for contrast */
+        font-size: 16px; /* Adjusts font size */
+        padding: 10px; /* Adds inner spacing */
+        border-radius: 0 0 10px 10px; /* Matches image corner rounding */
+        transition: opacity 0.3s; /* Smooth fade-in effect */
+    }
+
+    .gallery-item:hover .overlay {
+        opacity: 1; /* Makes the overlay visible on hover */
+    }
+
+    .gallery-item textarea {
+        display: none; /* Hides the comment box by default */
+    }
+
+    .gallery-item:hover textarea {
+        display: block; /* Shows the comment box on hover */
+        position: absolute; /* Positions it over the image */
+        bottom: 10px; /* Positions it above the bottom */
+        left: 50%; /* Centers it horizontally */
+        transform: translateX(-50%); /* Adjusts positioning to be truly centered */
+        width: 90%; /* Ensures it doesn’t exceed the image width */
+        padding: 5px; /* Adds spacing inside the textarea */
+        font-size: 14px; /* Makes the text readable */
+        border: 1px solid #ccc; /* Adds a border for visibility */
+        border-radius: 5px; /* Rounds the corners */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .gallery-item {
+            flex: 1 1 calc(50% - 20px); /* Adjusts to two items per row */
+            max-width: calc(50% - 20px);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .gallery-item {
+            flex: 1 1 100%; /* Adjusts to one item per row */
+            max-width: 100%;
+        }
+    }
+
+    .load-more-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .load-more-btn {
+        background-color: #007bff; /* Primary blue color */
+        color: #fff; /* White text */
+        padding: 10px 20px; /* Adds padding */
+        border: none; /* Removes border */
+        border-radius: 5px; /* Rounds the corners */
+        font-size: 16px; /* Adjusts font size */
+        cursor: pointer; /* Adds pointer cursor */
+        transition: background-color 0.3s; /* Smooth hover effect */
+    }
+
+    .load-more-btn:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+/*video*/
+/* Container styles */
+.custom-layout {
+    display: flex; /* Enables flexbox layout to align child elements side by side */
+    flex-wrap: wrap; /* Allows wrapping to a new row on smaller screens */
+    width: 100%; /* Makes the container span the full width of the page */
+    height: 62vh; /* Sets the container height to 58% of the viewport height */
+    background-color: lightblue; /* Sets the background color to light blue */
+    border: 5px solid palevioletred; /* Adds a black border around the container */
+    border-radius: 30px;          /* Round the corners of the border */
+    box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
+    padding: 30px; /* Adds padding around the container to prevent overlap */
+}
+
+/* Video section styles */
+.custom-layout .video-section {
+    flex: 1 1 40%; /* Allocates 40% of the width to this section but allows resizing */
+    box-sizing: border-box; /* Includes padding and border in total dimensions */
+    padding: 10px; /* Adds inner spacing around content */
+    display: flex; /* Enables flexbox for arranging child elements */
+    flex-direction: column; /* Aligns child elements vertically */
+    gap: 10px; /* Adds space between child elements */
+    overflow: auto; /* Adds a scrollbar if content exceeds the height */
+    min-width: 300px; /* Prevents the section from shrinking below 300px width */
+}
+
+.custom-layout .video-section video {
+    width: 100%; /* Makes the video span the full width of its container */
+    height: auto; /* Adjusts height proportionally to maintain aspect ratio */
+    max-height: 100%; /* Prevents the video from exceeding the container height */
+}
+
+/* Text section styles */
+.custom-layout .text-section {
+    flex: 1 1 60%; /* Allocates 60% of the width to this section but allows resizing */
+    display: flex; /* Enables flexbox for centering the text */
+    justify-content: center; /* Horizontally centers the text */
+    align-items: center; /* Vertically centers the text */
+    flex-direction: column; /* Aligns child elements vertically */
+    box-sizing: border-box; /* Includes padding and border in total dimensions */
+    min-width: 200px; /* Prevents the section from shrinking below 300px width */
+    overflow: hidden; /* Ensures any overflowing content is hidden */
+    padding: 30px; /* Adds padding around the text */
+    background-color:lavenderblush; /* Light  background for contrast */
+    border-radius: 50px; /* Rounded corners for the section */
+    text-align: center; /* Ensures the text is centered */
+    
+}
+
+.custom-layout .text-section h1 {
+    font-size: 2.5em; /* Large font size for the heading */
+    font-weight: bold; /* Makes the heading bold */
+    text-align: center; /* Centers the heading */
+    color: #007bff; /* Sets a blue color for the heading */
+    margin-bottom: 100px; /* Adds space below the heading */
+}
+
+.custom-layout .text-section h3 {
+    font-size: 1.8em; /* Slightly smaller font size for subheading */
+    font-weight: normal; /* Normal weight for the subheading */
+    color: #333; /* Dark gray color for text */
+    margin-bottom: 30px; /* Adds space below the subheading */
+}
+
+.custom-layout .text-section p {
+    font-size: 1.2em; /* Makes the font size slightly larger */
+    line-height: 1.6; /* Increases line height for better readability */
+    text-align: center; /* Centers the text */
+    color: #333; /* Dark gray color for text */
+    font-weight: normal; /* Normal weight for the paragraph */
+    max-width: 90%; /* Limits the text width for better presentation */
+    margin: 0 auto; /* Centers the paragraph within its container */
+}
+
+/* Button styling */
+.custom-layout .video-section .load-more {
+    display: block; /* Makes the button occupy the full width of its container */
+    margin: 10px auto; /* Centers the button horizontally and adds vertical spacing */
+    padding: 10px 20px; /* Adds inner spacing to the button */
+    background-color: #007bff; /* Sets the button's background color to blue */
+    color: white; /* Sets the text color to white */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    border-radius: 5px; /* Adds rounded corners to the button */
+}
+
+.custom-layout .video-section .load-more:hover {
+    background-color: #0056b3; /* Changes the background color on hover to a darker blue */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .custom-layout {
+        flex-direction: column; /* Stacks sections vertically on small screens */
+        height: auto; /* Adjusts container height dynamically */
+        padding: 10px; /* Adds padding for smaller screens */
+    }
+
+    .custom-layout .video-section,
+    .custom-layout .text-section {
+        flex: 1 1 100%; /* Each section takes up the full width */
+        min-height: auto; /* Ensures flexible height */
+    }
+
+    .custom-layout .text-section {
+        text-align: center; /* Ensures text is centered on small screens */
+        padding: 15px; /* Adjusts padding */
+    }
+}
+
+
+
+
+/* notice and event*/
+
+/* General container styling for the notices and events section */
+#unique-notices-events {
+    width: 100%;
+    display: flex; /* Flexbox layout for horizontal arrangement */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between; /* Distribute space between sections */
+    padding: 30px; /* Add padding around the container */
+    background-color: lavender; /* Sets the background color */
+}
+
+/* Styling for each section (Notices and Events) */
+#unique-notices-events .section {
+    width: 48%; /* Set each section to take 48% of the container width */
+    margin-bottom: 20px; /* Add space below each section */
+    padding: 20px; /* Add padding inside the section */
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
+    border: 5px solid darkblue; /* Add a light border around each section */
+    border-radius: 8px; /* Round the corners of the border */
+    background-color: white; /* Set a light background color for the section */
+}
+
+/* Titles of notices and events */
+#unique-notices-events h2 {
+    font-size: 24px; /* Set the font size for the title */
+    margin-bottom: 15px; /* Add space below the title */
+    color: black; /* Dark color for the title text */
+    text-decoration: underline; /* Underline the section title */
+}
+
+/* Scrollable boxes containing notices and events */
+#unique-notices-events .notice-boxes, #unique-notices-events .event-boxes {
+    max-height: 300px; /* Set a maximum height for the content area */
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds max height */
+    padding-right: 10px; /* Add right padding to avoid text touching the scroll bar */
+    margin-bottom: 15px; /* Add space below the scrollable area */
+}
+
+/* Styling for each individual notice and event box */
+#unique-notices-events .notice, #unique-notices-events .event {
+    border: 3px solid darkblue; /* Add a light border around each individual notice/event */
+    margin-bottom: 10px; /* Add space between each notice/event */
+    padding: 15px; /* Add padding inside each notice/event box */
+    border-radius: 5px; /* Round the corners of each notice/event */
+    background-color: whitesmoke; /* Set a white background for notices/events */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a floating effect */
+}
+
+/* Titles inside each notice and event (making them look the same) */
+#unique-notices-events .notice h3, #unique-notices-events .event h3 {
+    font-size: 18px; /* Set font size for notice/event title */
+    margin-bottom: 10px; /* Add space below the title */
+    color: #333; /* Dark color for the title text */
+    text-decoration: underline; /* Underline the title */
+    cursor: pointer; /* Change cursor to pointer to indicate clickability */
+    transition: text-decoration 0.3s; /* Smooth transition for the underline effect */
+}
+
+/* Body text inside notices and events (making them look the same) */
+#unique-notices-events .notice p, #unique-notices-events .event p {
+    font-size: 16px; /* Set font size for the body text */
+    color: #333; /* Dark text color for readability */
+}
+
+/* Add hover underline effect for both notices and events titles */
+#unique-notices-events .notice h3:hover, #unique-notices-events .event h3:hover {
+    text-decoration: underline; /* Underline the title on hover */
+}
+
+/* Styling for 'Load More' buttons */
+#unique-notices-events .load-more {
+    background-color: #007BFF; /* Set a blue background color for the button */
+    color: white; /* Set text color to white */
+    padding: 10px 20px; /* Add padding around the button */
+    border: none; /* Remove the default border */
+    border-radius: 5px; /* Round the corners of the button */
+    cursor: pointer; /* Change cursor to pointer when hovering over the button */
+    width: 100%; /* Make the button take up the full width of the section */
+    font-size: 16px; /* Set font size for the button text */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Change background color when hovering over the button */
+#unique-notices-events .load-more:hover {
+    background-color: #0056b3; /* Darken the blue color when hovering */
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    #unique-notices-events {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 20px; /* Add spacing between stacked sections */
+    }
+
+    #unique-notices-events .section {
+        width: 100%; /* Stack notices and events vertically on smaller screens */
+    }
+
+    #unique-notices-events .notice-boxes, #unique-notices-events .event-boxes {
+        max-height: 200px; /* Reduce the max height for smaller screens */
+    }
+}
+
+
+
+
+/* home end */
+
+
+
+
+/* about begin  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* footer */
+
+    /* Additional Styles for Hover Zoom Effect */
+    .box a {
+        transition: transform 0.3s ease-in-out, color 0.3s ease;
+    }
+
+    .box a:hover {
+        transform: scale(1.1);
+        color: #FFD700;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .box-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    /* Footer Styling */
+    .credit {
+        font-size: 14px;
+        text-align: center;
+        color: white;
+        padding-top: 20px;
+        border-top: 1px solid #fff;
+        margin-top: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
